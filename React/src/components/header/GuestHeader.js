@@ -17,8 +17,8 @@ function Header() {
       <AppBar>
         <Toolbar variant="dense">
           <Typography variant="h6">
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              SELLHUB
+            <Link to="/">
+              <img src="/logo.png" width="60" height="60" />
             </Link>
           </Typography>
           <Grid style={{ flexGrow: 1 }}></Grid>

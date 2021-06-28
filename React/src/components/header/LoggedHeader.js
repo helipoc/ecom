@@ -29,11 +29,9 @@ function Header() {
     <div style={{ marginBottom: "5em" }}>
       <AppBar>
         <Toolbar variant="dense">
-          <Typography variant="h6">
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              SELLHUB
-            </Link>
-          </Typography>
+          <Link to="/">
+            <img src="/logo.png" width="60" height="60" />
+          </Link>
           <TextField
             style={{ width: "50%", marginLeft: "2em" }}
             onChange={(e) => setSearch(e.target.value)}
