@@ -1,6 +1,8 @@
 import axios from "axios";
 import * as Actions from "../redux/actions/alert";
 import { UserTypes as Types } from "../redux/Types";
+import { LoadItems } from "./items";
+
 
 export function Register(user, pass) {
   return (dispatch) => {
@@ -31,8 +33,6 @@ export function Login(user, pass) {
         dispatch(Loaduser(data.token));
       } else {
         dispatch(Actions.setAlert("Invalid Login", "error"));
-      }
-      {
       }
     } catch (err) {
       dispatch(Actions.setAlert("Somthing went wrong", "error"));

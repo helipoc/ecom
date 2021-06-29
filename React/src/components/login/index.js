@@ -17,8 +17,7 @@ function Login(props) {
   };
   const handleLog = () => {
     let args = Object.values(info);
-    dispatch(api.Login(args[0], args[1]));
-
+    dispatch(api.Login(args[0], args[1]))
     props.history.push("/");
   };
 

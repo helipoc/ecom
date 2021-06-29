@@ -29,7 +29,7 @@ function Profile(props) {
       <Grid>
         <Typography variant="h6">
           {/** if the requested user is the same as the connected one AKA if we hit /profile display You instead of the profile name */}
-          {user.username == usern.username ? "You" : user.username} have{" "}
+          {user.username == usern.username ? "You" : user.username} has{" "}
           {user.Items.length} listed item
         </Typography>
         <hr />

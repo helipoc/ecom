@@ -51,6 +51,7 @@ function Home(props) {
       </>
     );
   } else {
+    console.log(items)
     return "No avaiable Items ";
   }
 }
