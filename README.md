@@ -1,12 +1,11 @@
-# marketplace
-MERN Marketplace 
-
+# sellhub
+MERN p2p ecom
 Features :
 * LOGIN/LOGOUT/REGISTER USER
 * Checkout user items/user profile
-* ADD ITEM DELETE ITEM (with Picture saved locally)
+* ADD ITEM , DELETE ITEM
 * Search for an item
 * Paginate Items upon date
 * REMOVE/ADD items on your cart
-* Checkout *Dummy Checkout with dummy balance* No paypal/Stripe payement gateway
+* TODO : Add payement gateway 
 
