@@ -14,12 +14,14 @@ function Checkout(props) {
     dispatch(api.LoadCart());
   }, []);
 
+  console.log(cart.items)
+
   if (cart.items?.length > 0) {
     return (
       <>
         <Paper style={{ width: "50vh", margin: "0 auto" }}>
           <Grid container direction="column" spacing={3}>
-            {cart.items.map((cartItem) => {
+            {cart.items.map((cartItem, id) => {
               total += cartItem.Price;
               return (
                 <Grid item key={cartItem._id}>

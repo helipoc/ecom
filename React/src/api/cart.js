@@ -4,7 +4,10 @@ import { addItem, LoadItems, RemovedItem } from "../redux/actions/cart";
 
 const token = localStorage.getItem("token");
 export function Addtocart(id) {
+
+
   return async (dispatch) => {
+    const token = localStorage.getItem("token");
     await axios.post(
       "/cart/add",
       { itemId: id },
@@ -18,6 +21,8 @@ export function Addtocart(id) {
 }
 
 export function LoadCart() {
+  const token = localStorage.getItem("token");
+
   return (dispatch) => {
     axios
       .get("/cart", {
@@ -27,7 +32,7 @@ export function LoadCart() {
   };
 }
 
-// Optimistic delete action what's the worst that could happen ?
+
 export function DeleteFromcart(id) {
   return (dispatch) => {
     dispatch(RemovedItem(id));
@@ -37,12 +42,13 @@ export function DeleteFromcart(id) {
         data: { itemId: id },
         headers: { Authorization: `Bearer ${token}` },
       })
-      .then((res) => console.log(res.data));
+      .then((res) => dispatch(LoadCart()));
   };
 }
 
 export function Buy() {
   return async (dispatch) => {
+    const token = localStorage.getItem("token");
     const { data } = await axios.post("/cart/buy", null, {
       headers: { Authorization: `Bearer ${token}` },
     });

@@ -1,5 +1,4 @@
 const User = require("../Models/User");
-const Item = require("../Models/Item");
 
 /**
  * Adding an item to your cart
@@ -44,12 +43,12 @@ module.exports.Buy = async (req, res) => {
 /**
 * User cart items
 */
-module.exports.MyCart = (req,res)=>{
+module.exports.MyCart = (req, res) => {
 
-req.user.populate("Cart",(err,{Cart}) => {
+  req.user.populate("Cart", (err, { Cart }) => {
 
-res.send(Cart)
+    res.send(Cart)
 
-})
+  })
 
 }

@@ -9,6 +9,7 @@ export default function (state = { count: 0 }, action) {
       return {
         ...state,
         items: [...state.items].filter((item) => item._id != action.id),
+        count: state.count == 0 ? state.count : state.count - 1
       };
     default:
       return state;
